@@ -1,19 +1,21 @@
 
 const formLogin = document.getElementById("formLogin");
 
-formLogin.addEventListener("submit", function (event) {
+formLogin.addEventListener("submit", function(event) {
+
     event.preventDefault();
 
     const usuario = document.getElementById("usuario").value.trim();
     const senha = document.getElementById("senha").value;
 
-    if (
-        usuario === "op_z4r8t2b6" &&
-        senha === "Piano&Dinossauro&Martelo&953%"
-    ) {
-        window.location.href = "sucesso.html";
+    // Dados de acesso
+    const usuarioCorreto = "nicolas101010";
+    const senhaCorreta = "nicolas202020";
 
+    if (usuario === usuarioCorreto && senha === senhaCorreta) {
+        window.location.href = "sucesso.html";
     } else {
         window.location.href = "erro.html";
     }
+
 });
